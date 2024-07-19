@@ -1,0 +1,390 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Try Sign</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    padding-bottom: 100px;
+	color:#f9f9f9
+  }
+  
+  #contact {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    max-width: 840px;
+  }
+  
+  /* Left contact page */
+  .form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  
+  .form-control, 
+  textarea {
+    max-width: 400px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+  }
+  
+  .alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .send-text {
+    display: block;
+    margin-top: 5px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  .currword{
+    position: relative;
+    top:50px;
+    left:100px;
+    margin-left:70px;
+    margin-top:50px;
+    bottom: 100px;
+    margin-bottom: 100px;
+    
+  }
+  .alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+  }
+  
+  /* Begin Right Contact Page */
+  .direct-contact-container {
+    
+    max-width: 400px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: #f9f9f9;
+  }
+  
+  .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact-text a {
+    color: #ffffff;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }
+  </style>
+</head>
+<body>
+	
+{% block content %}
+<section id="contact">
+  
+	<h1 class="section-header">Cognisign</h1>
+	<div class = "row" style="padding-left: 120px;">
+		<div class ="col">
+	<form id="contact-form" class="form-horizontal" role="form" action="" method="post" align="left">
+		{% csrf_token %}
+		<span class="contact-text place">Enter input text here:</span><br><br>
+    
+    <div id="test">
+		<textarea class="form-control"mkv rows="10" name="sen" class="mytext" id="speechToText" placeholder="" required></textarea>
+  </div>
+		<button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" onclick="hide()">
+		  <div class="alt-send-button">
+			<i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+		  </div>
+		
+		</button>
+    <spam class="currword" id = "currword"></spam>
+		
+	  </form>
+	</div>
+	  
+		<div class="col">
+			<div class="direct-contact-container">
+				<h2 align="center">Output</h2>
+			  
+				  <div style="text-align:center">	&nbsp&nbsp
+					<button class="submit" onclick="playPause()">Play</button>
+					<!--  LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN ASHISH
+			  
+					<button onclick="makeBig()">Big</button>
+					<button onclick="makeSmall()">Small</button>
+					<button onclick="makeNormal()">Normal</button>-->
+			  
+			  
+					<video id="videoPlayer" width="400" height="350" preload="auto" autoplay>
+					  <source src="" type="video/mp4">
+				  Your browser does not support HTML5 video.
+					</video>
+					</div>
+				</div>
+			  
+		</div>
+
+
+	<div class="row">
+		<div class="col">
+	  <table cellspacing="20px">
+        <tr>
+            <td class="td" style="font-style: penhurst shadow;">Input Text Is:</td>
+            <td class="td">{{ text }}</td>
+        </tr>
+        <tr>
+            <td class="td">Text:</td>
+            <td class="td" id="paragraph" align="center">
+                {% for word in words %}
+                <span id="{{ forloop.counter0 }}" style="margin-right: 8px">{{ word }}</span>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+	</div>
+	</div>
+	</div>
+
+
+<script>
+  function hide(){
+    var x = document.getElementById("test");
+    if(x){
+        if(x.style.display === "none"){
+          document.getElementById("test").style.display = "block";
+        }
+        else{
+          document.getElementById("test").style.display = "none";
+        }
+      }
+    else{
+      alert("Not working");
+    }
+  }
+	//webkitSpeechRecognition api for speech to text conversion
+	function record(){
+		var recognition = new webkitSpeechRecognition();
+		recognition.lang='en-IN';
+
+		recognition.onresult = function(event){
+			console.log(event)
+			document.getElementById('speechToText').value = event.results[0][0].transcript;
+		}
+		recognition.start();
+	 }
+	function play()
+	{
+		var videoSource = new Array();
+    var videoName = new Array();
+		var	videos = document.getElementById("paragraph").getElementsByTagName("span");
+		var j;
+		for(j=0;j<videos.length;j++)
+		{
+			videoSource[j] = "/static/" + videos[j].innerHTML +".mp4";
+      videoName[j] = videos[j].innerHTML
+		}
+
+		var i = 0; // define i
+		var videoCount = videoSource.length;
+    var flag = 0;
+		function videoPlay(videoNum)
+		{
+			document.getElementById("paragraph").getElementsByTagName("span")[videoNum].style.color = "#09edc7";
+			document.getElementById("paragraph").getElementsByTagName("span")[videoNum].style.fontSize = "xx-large";
+      document.getElementById("currword").innerHTML = videoName[videoNum];
+      document.getElementById("currword").style.color = "#09edc7";
+      document.getElementById("currword").style.fontSize = "xxx-large";
+			document.getElementById("videoPlayer").setAttribute("src", videoSource[videoNum]);
+	    	document.getElementById("videoPlayer").load();
+	    	document.getElementById("videoPlayer").play();
+
+		}
+		document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+		document.getElementById("paragraph").getElementsByTagName("span")[0].style.color = "#09edc7";
+		document.getElementById("paragraph").getElementsByTagName("span")[0].style.fontSize = "xx-large";
+
+		videoPlay(0); // play the video
+
+		function myHandler()
+		{
+	 		document.getElementById("paragraph").getElementsByTagName("span")[i].style.color = "#feda6a";
+			document.getElementById("paragraph").getElementsByTagName("span")[i].style.fontSize = "20px";
+			i++;
+	    	if (i == videoCount)
+	    	{
+	       	    document.getElementById("videoPlayer").pause();
+	    	}
+	     	else
+	     	{
+	        	videoPlay(i);
+	    	}
+		}
+	}
+	/* LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN
+	function makeBig() {
+	    document.getElementById("videoPlayer").width = 560;
+		document.getElementById("videoPlayer").height = 360;
+	}
+
+	function makeSmall() {
+	    document.getElementById("videoPlayer").width = 320;
+		document.getElementById("videoPlayer").height = 180;
+	}
+
+	function makeNormal() {
+	    document.getElementById("videoPlayer").width = 420;
+		document.getElementById("videoPlayer").height =280;
+	}*/
+	function playPause(){
+  		if (document.getElementById("videoPlayer").paused){
+    		play();}
+  		else{
+    		document.getElementById("videoPlayer").pause();}
+		}
+
+	</script>
+
+
+{% endblock %}
+
+</body>
+</html>

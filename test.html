@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">
+		<textarea class="form-control"mkv rows="10" name="sen" class="mytext" id="speechToText" placeholder="" required></textarea>
+  </div>
+  <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" onclick="hide()">
+    <div class="alt-send-button">
+      <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+    </div>
+
+  </button>
+  <script>
+    function hide(){
+    var x = document.getElementById("test");
+    if(x){
+        if(x.style.display === "none"){
+          x.style.display = "block";
+        }
+        else{
+          x.style.display = "none";
+        }
+      }
+    else{
+      alert("Not working");
+    }
+  }
+
+  </script>
+</body>
+</html>
